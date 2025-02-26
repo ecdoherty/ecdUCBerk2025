@@ -6,4 +6,4 @@ The data set (hypothetically) was based on a survey so, from a feasibility persp
 Offer more coupons during nicer, warmer weather
 Offer more coupons for carry out/takeaway as well as restaurants under $20 especially to those drivers making less than $62499. 
 
-Link to notebook:
+Link to notebook: https://github.com/ecdoherty/ecdUCBerk2025
