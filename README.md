@@ -1,4 +1,3 @@
-Readme
 This model is a valuable internal tool to support data-informed pricing, inventory prioritization, and operational trade-offs in used car dealerships.
 * Key Drivers Identified:
     * Vehicle age & condition have the largest price impact
