@@ -1,9 +1,30 @@
-Findings: 
-Overall, if a driver had visited any of the business types offering coupons more than once, they were more likely to accept a coupon than drivers who hadn't visited those business types one time in a month. However, when other factors were considered, a driver who frequented a business type more than 4 times was not much more likely to accept a coupon than those who visited more than once a month. Additionally, the nicer the weather, the greater the acceptance rates. Coffee house coupons were offered the most during this promotional period and While coffee house coupons had the highest number of acceptanes, they also had the highest number of declines so, proporationally, their rate of acceptance weren't as high as some of the other coupon types. On average, the drivers that had no urgent place to go were more likely to accept any type of coupon, regardless of whether or not they were with a passenger, and regardless of their income. Interestingly, other than the more expensive restaurants ($20-$50), the lowest and highest income groups were nearly the same, with a slight swing towards the lowest income group being more likely to accept coupons regardless of thier target destination. The most successful coupon types were carry out & takeaway coupons as well as restaurants under $20 regardless of income group, target destination or passenger status. 
+# **Shadow API Detection Using Machine Learning** #
 
-Recommendations:
-The data set (hypothetically) was based on a survey so, from a feasibility perspective, it would be difficult for Amazon to identify if drivers have passengers and what kind of passenger they are in real time. Further, if Amazon has consistent tracking data of driver's home and work routines, they could offer more coupons to drivers that were not headed anywhere urgently or had frequented certain businesses more than one time that month. At the very least, and likely the lowest cost per RIO would be to:
-Offer more coupons during nicer, warmer weather
-Offer more coupons for carry out/takeaway as well as restaurants under $20 especially to those drivers making less than $62499. 
+# Executive summary
+This capstone project investigates the application of machine learning techniques to detect and risk-rank shadow API calls, which pose significant cybersecurity threats due to their unmonitored and unmanaged nature. The project combines both real-world and synthetic datasets to assess supervised and unsupervised models for their ability to identify anomalous behavior indicative of shadow APIs.
 
-Link to notebook: https://github.com/ecdoherty/ecdUCBerk2025
+# Rationale  
+Organizations increasingly rely on APIs, but managing their lifecycle has become difficult, often resulting in undocumented or rogue endpoints that increase the attack surface. Traditional discovery methods are insufficient, necessitating a machine-learning-based approach that can proactively detect and prioritize shadow API risks.
+
+# Research Question
+Can machine-learning models reliably detect and risk-rank shadow-API calls?
+
+# Data Sources
+## API Centric Traffic Data:
+- API Access Behavior Anomaly: https://www.kaggle.com/datasets/tangodelta/api-access-behaviour-anomaly-dataset  
+    This is a dataset of API calls that has qualified user access behaviors as numerical features labeled as normal or outlier
+- Synthetic Data:
+    Used Faker Python package to generate synthetic shadow and non-shadow API calls 
+
+# Methodology
+A combination of supervised classifiers (Logistic Regression, Random Forest, Gradient Boosting), anomaly detection models (One-Class SVM, Isolation Forest, Local Outlier Factor), AutoEncoders, and distance/density-based methods (KNN, DBSCAN) were applied and models were evaluated using precision, recall, F1-score, and accuracy metrics for both the Kaggle and synthetic datasets.
+
+# Results
+
+Supervised models achieved near-perfect classification, indicating strong separability in both datasets. AutoEncoders demonstrated high reconstruction-based anomaly detection performance after threshold tuning. One-Class SVM and Isolation Forest performed well on structured data, while DBSCAN and KNN revealed clusters and outliers with moderate precision and recall. Overall, multiple approaches validated the feasibility of machine learning for shadow API detection.
+
+# Next steps
+Future work includes testing models on real-time streaming API logs, integrating risk scoring into monitoring systems, and expanding datasets to include broader threat patterns and attack scenarios.
+
+# Outline of project
+-	Link to notebook; https://github.com/ecdoherty/ecdUCBerk2025 
